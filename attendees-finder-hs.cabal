@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      AttendeesFinder
       Lib
   other-modules:
       Paths_attendees_finder_hs
