@@ -11,6 +11,6 @@ data Attendee = Attendee {
 
 
 findByInfixOfFirstName :: String -> [Attendee] -> [Attendee]
-findByInfixOfFirstName query attendees = filter (matches query) attendees
+findByInfixOfFirstName = filter . matches
     where matches :: String -> Attendee -> Bool 
           matches query attendee = query `isInfixOf` (firstName attendee)
