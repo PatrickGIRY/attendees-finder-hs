@@ -3,6 +3,7 @@ module AttendeesFinder(
     Attendee(firstName, Attendee)
 ) where
 
+import Data.List(isInfixOf)
 
 data Attendee = Attendee {
      firstName :: String
@@ -10,4 +11,6 @@ data Attendee = Attendee {
 
 
 findByInfixOfFirstName :: String -> [Attendee] -> [Attendee]
-findByInfixOfFirstName = undefined
+findByInfixOfFirstName query attendees = filter (matches query) attendees
+    where matches :: String -> Attendee -> Bool 
+          matches query attendee = query `isInfixOf` (firstName attendee)
