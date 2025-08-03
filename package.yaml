@@ -1,6 +1,6 @@
 name:                attendees-finder-hs
 version:             0.1.0.0
-github:              "githubuser/attendees-finder-hs"
+github:              "https://github.com/PatrickGIRY/attendees-finder-hs"
 license:             BSD-3-Clause
 author:              "Author name here"
 maintainer:          "example@example.com"
